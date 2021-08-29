@@ -15,10 +15,10 @@ The home sales data will be scraped from one of the major public real estate web
 - Square_Feet (integer) : total interior square footage
 - Lot_Size (integer)       : total exterior square footage
 - Year_Built (integer)     : year when the house was built
-- Zipcode (integer)        : USPS zip code associated with the home
-- Pool (boolean)            : 1 = has pool, 0 = no pool
-- Garage (boolean)       : 1 = has garage, 0 = no garage
-- Stories (integer)         : number of stories (floors) in the home
+- Zipcode (categorical) : USPS zip code associated with the home
+- Pool (binary)               : 1 = has pool, 0 = no pool
+- Garage (binary).         : 1 = has garage, 0 = no garage
+- Stories (categorical)   : number of stories (floors) in the home
 - Schools (float)            : average Great Schools score (0 - 10) for all schools serving the home's neighborhood
 
 Additionally, general data for these home sales is available via direct csv file download from the scraped website, and it provides several more potentially useful predictors:
@@ -26,15 +26,15 @@ Additionally, general data for these home sales is available via direct csv file
 - Days on Market (integer) : the number of days between the home's listing date and the sale date
 - HOA/Month (integer)       : the Homeowner's Association monthly fee in dollars (if any)
 
-As previously indicated, this project will predict Home Sale Price based on some combination of the predictors above (and any additional features engineered from them). The baseline model will be an Ordinary Least Squares Linear Regression using features deemed to be most correlated to Home Sale Price. From there, variable selection and regularization will be applied in an effort to find the model that performs best. If time permits, attempts will also be made to employ other regression techniques (e.g. Random Forrest, XGBoost).
+As previously indicated, this project will predict Home Sale Price based on some combination of the predictors above (and any additional features engineered from them). The baseline model will be an Ordinary Least Squares Linear Regression using features deemed to be most correlated to Home Sale Price. From there, variable selection and regularization will be applied in an effort to find the model that performs best. If time permits, attempts will also be made to employ other regression techniques (e.g., Random Forrest, XGBoost).
 
 The tools required for this project are: 
 
 1. Requests and BeautifulSoup modules to facilitate webscraping
-3. Pandas to clean, explore  and generate the final modeling data
+3. Pandas to clean, explore and generate the final modeling data
 3. SKLearn to implement various linear regression models as well as to perform cross validation, variable selection and regularization
 4. Matplotlib and Seaborn to visualize the data and present final results
 5. Python 3.8 (to be able to use Requests, BeautifulSoup, Pandas, SKLearn, Matplotlib and Seaborn)
 
-The Minimum Viable Product for this project will be a report (and slides) presenting a working model optimally tuned to predict Home Sale Price based on the best subset of preditors and engineered features. Model quality will be demonstrated with graphs (Actual Sale Price vs. Predicted Value, Residuals vs. Predicted Value) and by citing figures of merit such as R-Squared and an appropriate measure of error (such as MAE, RMSE).
+The Minimum Viable Product for this project will be a report (and slides) presenting a working model optimally tuned to predict Home Sale Price based on the best subset of preditors and engineered features. Model quality will be demonstrated with graphs (Actual Sale Price vs. Predicted Value, Residuals vs. Predicted Value, Q-Q Plot) and by citing figures of merit such as R-Squared and an appropriate measure of error (such as MAE, RMSE).
 
