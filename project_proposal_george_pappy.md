@@ -1,6 +1,6 @@
 # PROJECT PROPOSAL
 
-##### IN THE CURRENT RESIDENTIAL REAL ESTATE MARKET, CAN A REASONABLE PREDICTION OF THE FINAL SALES PRICE OF A HOME BE PREDICTED BY USING RECENT SALES DATA?
+##### IN THE CURRENT RESIDENTIAL REAL ESTATE MARKET, CAN A REASONABLE PREDICTION OF THE FINAL SALES PRICE OF A HOME BE MADE BY USING RECENT SALES DATA?
 
 With the COVID-19 pandemic came an historic rise in home sales as people have spent more time social distancing and (to the extent possible) working from home. Demand far exceeds supply and realtors tell stories of literally dozens of bids on the same house and final sales prices far above the original listing price.
 
