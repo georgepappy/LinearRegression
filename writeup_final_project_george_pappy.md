@@ -10,11 +10,11 @@ A small group of independent realtors in the West San Fernando Valley (a suburb 
 
 ## Design
 
-The clients primarily deal with single family home sales, which aligns well with the current belief that the market for such residential properties behaves uniquely relative to the market for condominiums and other multi-family dwellings. Therefore, the data to be considered will be all single family home sales over the past three months in the West San Fernando Valley, using the 405 Freeway as the East-West cutoff line (i.e., every home sale to the east of this line will be disregarded).
+The clients primarily deal with single family home sales, which aligns well with the current belief that the market for such residential properties behaves uniquely relative to the market for condominiums and other multi-family dwellings. Therefore, the data considered was all single family home sales over the past three months in the West San Fernando Valley, using the 405 Freeway as the East-West cutoff line (i.e., every home sale to the east of this line was disregarded). This data was used to train, validate and test predictive models.
 
 ## Data
 
-The data used for modeling in this project was scraped from a publicly-available real estate website and consists of a target variable (Home Sale Price) and ten predictors:
+The modeling data was scraped from a publicly-available real estate website and consists of a target variable (Home Sale Price) and ten predictors:
 
 - Beds (integer) 			: number of bedrooms
 - Baths (float)                : number of bathrooms (0.5 for toilet only, 0.75 add shower, 1.0 add tub and shower)
@@ -27,7 +27,7 @@ The data used for modeling in this project was scraped from a publicly-available
 - Stories (categorical)   : number of stories (floors) in the home
 - Schools (float)            : average Great Schools score (0 - 10) for all schools serving the home's neighborhood
 
-Additionally, supplemental data in CSV form was downloaded from the same website, providing an additional predictor:
+Supplemental data in CSV form was downloaded from the same website, providing an additional predictor:
 
 - HOA/Month (integer)       : the Homeowner's Association monthly fee in dollars (if any)
 
@@ -35,11 +35,11 @@ The supplemental data also included a potential alternate target variable which 
 
 - Days on Market (integer) : the number of days between the home's listing date and the sale date
 
-This Home Sale Price could be used as a hyperparameter in predicting this alternative target to give realtors a sense of how long the house will remain unsold at different price points. 
+Home Sale Price could be used as a hyperparameter in predicting this alternative target to give realtors a sense of how long the house will remain unsold at different price points. 
 
 ## Algorithms
 
-The primary predictive models developed for this project were Linear Regressions, both with and without regularization (Lasso, Ridge, ElasticNet). Tree-based regressors (Random Forest, XGBoost) were also developed. Extensive feature engineering was performed to incrementally improve model performance before selecting the best models (one Linear Regressor and one Tree-Based model). The primary perfromance metric was Mean Absolute Error (MAE, in $) since this was deemed to be the most customer-friendly (and understandable) metric. R-squared and Root Mean Square Error (RMSE) were also considered during the modeling process.
+The primary predictive models developed for this project were Linear Regressors, both with and without regularization (Lasso, Ridge, ElasticNet). Tree-based regressors (Random Forest, XGBoost) were also developed. Extensive feature engineering was performed to incrementally improve model performance before selecting the best models (one Linear Regressor and one Tree-Based model). The primary perfromance measure was Mean Absolute Error (MAE, in $) since this was deemed to be the most customer-friendly (and understandable) metric. R-squared and Root Mean Square Error (RMSE) were also considered during the modeling process.
 
 ## Tools 
 

@@ -21,10 +21,15 @@ The home sales data will be scraped from one of the major public real estate web
 - Stories (categorical)   : number of stories (floors) in the home
 - Schools (float)            : average Great Schools score (0 - 10) for all schools serving the home's neighborhood
 
-Additionally, general data for these home sales is available via direct csv file download from the scraped website, and it provides several more potentially useful predictors:
+Supplemental data for these home sales is available via direct csv file download from the scraped website, providing an additional predictor:
+
+- HOA/Month (integer)       : the Homeowner's Association monthly fee in dollars (if any)
+
+The supplemental data also includes a potential alternate target variable which could be used with the predictors above to develop related predictive models:
 
 - Days on Market (integer) : the number of days between the home's listing date and the sale date
-- HOA/Month (integer)       : the Homeowner's Association monthly fee in dollars (if any)
+
+Home Sale Price could be used as a hyperparameter in predicting this alternative target to give realtors a sense of how long the house will remain unsold at different price points. 
 
 As previously indicated, this project will predict Home Sale Price based on some combination of the predictors above (and any additional features engineered from them). The baseline model will be an Ordinary Least Squares Linear Regression using features deemed to be most correlated to Home Sale Price. From there, variable selection and regularization will be applied in an effort to find the model that performs best. If time permits, attempts will also be made to employ other regression techniques (e.g., Random Forrest, XGBoost).
 
