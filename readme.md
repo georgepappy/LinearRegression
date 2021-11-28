@@ -1,4 +1,4 @@
-## LINEAR REGRESSION/WEB SCRAPING PROJECT WRITE-UP
+## LINEAR REGRESSION/WEB SCRAPING PROJECT
 
 ### Predicting Final Sales Price for Single Family Homes in the West San Fernando Valley
 
@@ -53,5 +53,5 @@ The following tools were used in this project:
 
 ## Communication
 
-In addtition to presenting final Project Slides to the stakeholders, all work (including the slides) will be available on GitHub: https://github.com/georgepappy/LinearRegression
+In addtition to presenting final Project Slides to the stakeholders, all work (including the slides) can be found here: https://github.com/georgepappy/LinearRegression
 
